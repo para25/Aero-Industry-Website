@@ -1,0 +1,668 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .logo {
+        margin: 0;
+        font-size: 1.45em;
+    }
+    
+    .logo a:hover {
+        color: #718daa;
+    }
+    
+    .main-nav {
+        margin-top: 5px;
+    }
+    
+    .logo a,
+    .main-nav a {
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+    }
+    
+    .main-nav a {
+        color: #fff;
+        font-size: .99em;
+    }
+    
+    .main-nav a:hover {
+        color: #718daa;
+    }
+    
+    .header {
+        padding-top: .5em;
+        padding-bottom: .5em;
+        border: 0 solid #a2a2a2;
+        background-color: #21201E;
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    }
+    
+    .fixed-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        /* Adjust the z-index as needed */
+    }
+    /* ================================= 
+  Media Queries
+==================================== */
+    
+    @media (min-width: 769px) {
+        .header,
+        .main-nav {
+            display: flex;
+        }
+        .header {
+            flex-direction: column;
+            align-items: center;
+            .header {
+                width: 80%;
+                margin: 0 auto;
+                max-width: 1150px;
+            }
+        }
+    }
+    
+    @media (min-width: 1025px) {
+        .header {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    
+    .bordered-img {
+        display: block;
+        width: 100%;
+        /* Make the image fill the container width */
+        height: auto;
+        /* This will maintain the aspect ratio */
+        border: 2px solid;
+        /* Set a transparent border initially */
+        border-image: linear-gradient(to right, #FFB6C1, #87CEFA);
+        /* Gradient border */
+        border-image-slice: 1;
+        /* Ensure full border is visible */
+    }
+    
+    .phase1 {
+        display: flex;
+    }
+    
+    .img1,
+    .intro {
+        flex: 1;
+        border: px solid #ccc;
+        background-color: #FFB6C1;
+    }
+    
+    .intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .intro-text {
+        max-width: 500px;
+    }
+    
+    .intro-title {
+        font-size: 500%;
+        color: #2c3e50;
+        margin-bottom: 0.1px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    
+    .company-name {
+        font-size: 48px;
+        font-weight: bold;
+        color: #3498db;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .tagline {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.3s;
+    }
+    
+    .cta-button:hover {
+        background-color: #2980b9;
+    }
+    
+    .fade-in {
+        opacity: 0;
+        animation: fadeInAnimation 1.5s ease-in forwards;
+    }
+    /* Add animation classes */
+    
+    .slide-from-left {
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: slideFromLeftAnimation 1.5s ease-in forwards;
+    }
+    
+    .slide-from-right {
+        opacity: 0;
+        transform: translateX(100%);
+        animation: slideFromRightAnimation 1.5s ease-in forwards;
+    }
+    /* Define slide from left animation keyframes */
+    
+    @keyframes slideFromLeftAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    /* Define slide from right animation keyframes */
+    
+    @keyframes slideFromRightAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .adventure {
+        text-align: center;
+        padding: 50px;
+        background-color: bisque;
+        color: black;
+        border-radius: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .adventure-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .adventure-description {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    .luxury-experience {
+        text-align: center;
+        padding: 50px;
+        background-color: #718daa;
+        /* Updated background color */
+        margin-bottom: 50px;
+        border-radius: 20px;
+    }
+    
+    .luxury-text {
+        max-width: 700px;
+        /* Increase max width for improved readability */
+        margin: 0 auto;
+        /* Center align within the section */
+    }
+    
+    .luxury-title {
+        font-size: 36px;
+        /* Increased font size for emphasis */
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fff;
+        /* Darker text color for readability */
+    }
+    
+    .luxury-description {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #fff;
+        /* Slightly darker text color */
+    }
+    
+    .main-footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 0;
+    }
+    
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer-logo img {
+        max-width: 100px;
+    }
+    
+    .footer-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .footer-links li {
+        margin-right: 20px;
+    }
+    
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+        color: #f9ca24;
+    }
+    
+    .footer-social .social-icon {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    .footer-social img {
+        max-width: 30px;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .ava-logo {
+        mix-blend-mode: lighten;
+    }
+    /* styles.css */
+    /* ...existing styles... */
+    
+    .about {
+        background-color: #f9f9f9;
+        padding: 80px 0;
+    }
+    
+    .about-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .about-description {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    .team {
+        background-color: #fff;
+        padding: 80px 0;
+    }
+    
+    .team-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .team-description {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 40px;
+    }
+    
+    .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Style individual team member profiles */
+    
+    .team-member {
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .team-member-name {
+        font-size: 20px;
+        margin-top: 10px;
+        color: #333;
+    }
+    
+    .team-member-role {
+        font-size: 16px;
+        color: #777;
+    }
+    
+    .team-member img {
+        height: 30vh;
+        width: 30vh;
+        max-width: 100%;
+        border-radius: 50%;
+        /* Rounded profile image */
+        border: 3px solid #ccc;
+    }
+    /* styles.css */
+    /* ...existing styles... */
+    
+    .pricing {
+        background-color: #f9f9f9;
+        padding: 80px 0;
+    }
+    
+    .pricing-title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    
+    .pricing-plans {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .pricing-plan {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+    }
+    
+    .plan-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .plan-description {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+    
+    .plan-price {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .plan-duration {
+        font-size: 16px;
+        color: #555;
+    }
+    
+    .plan-features {
+        list-style: none;
+        margin: 20px 0;
+        padding: 0;
+    }
+    
+    .plan-features li {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+    
+    .plan-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #f9ca24;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    
+    .plan-button:hover {
+        background-color: #e1b12c;
+    }
+    
+    .pricing-plan.special {
+        background-color: #f9ca24;
+        /* Background color for the special plan */
+        /* Text color for the special plan */
+        border: none;
+        /* No border for the special plan */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        /* Shadow for the special plan */
+    }
+    
+    .pricing-plan.special .plan-title {
+        color: #fff;
+        /* Title color for the special plan */
+    }
+    
+    .pricing-plan.special .plan-description {
+        color: #f0f0f0;
+        /* Description color for the special plan */
+    }
+    
+    .pricing-plan.special .plan-price {
+        color: #fff;
+        /* Price color for the special plan */
+    }
+    
+    .pricing-plan.special .plan-duration {
+        color: #f0f0f0;
+        /* Duration color for the special plan */
+    }
+    
+    .pricing-plan.special .plan-features li {
+        color: #fff;
+        /* Feature list item color for the special plan */
+    }
+    
+    .pricing-plan.special .plan-button {
+        background-color: #fff;
+        /* Button background color for the special plan */
+        color: #f9ca24;
+        /* Button text color for the special plan */
+    }
+    /* Adding backgrounds for each plan */
+    
+    .pricing-plan.special {
+        background-image: linear-gradient(to bottom, #e74c3c, #c0392b);
+        /* color: #fff; */
+        /* Change text color for better contrast */
+    }
+    
+    .pricing-plan.eco {
+        background-image: linear-gradient(to bottom, #ddd6f3, #faaca8);
+    }
+    
+    .pricing-plan.busi {
+        background-image: linear-gradient(to bottom, #D8B5FF, #1EAE98);
+    }
+    
+    .pricing-plan:hover {
+        transform: scale(1.05);
+        /* Enlarge the plan on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        /* Adjust the shadow on hover */
+        transition: transform 0.8s, box-shadow 0.3s;
+    }
+    /* Adjust the button background color on hover */
+    
+    .pricing-plan:hover .plan-button {
+        background-color: #e1b12c;
+    }
+    /* styles.css */
+    /* ...existing styles... */
+    
+    .contact {
+        background-color: #f9f9f9;
+        padding: 80px 0;
+    }
+    
+    .contact form {
+        background-color: tan;
+    }
+    
+    .contact-title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .contact-description {
+        font-size: 18px;
+        text-align: center;
+        color: #555;
+        margin-bottom: 40px;
+    }
+    
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .contact-form:hover {
+        transform: translateY(-5px);
+        /* Lift the form slightly on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        /* Adjust the shadow on hover */
+    }
+    
+    .contact-form label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #f9ca24;
+        /* Highlight the input on focus */
+    }
+    
+    .contact-form button.submit-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #f9ca24;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-form button.submit-button:hover {
+        background-color: #e1b12c;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .contact-form {
+            max-width: 100%;
+        }
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        background: #000;
+    }
+    
+    .contact-info-item {
+        flex: 1;
+        max-width: 300px;
+        padding: 20px;
+        text-align: center;
+        background-color: #00ffff;
+        border-radius: 8px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .info-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .info-content {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+    }
+    /* Adjust layout on smaller screens */
+    
+    @media screen and (max-width: 768px) {
+        .contact-info-item {
+            max-width: 100%;
+        }
+    }
